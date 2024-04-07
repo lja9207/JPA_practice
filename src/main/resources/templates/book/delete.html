@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Book</title>
+</head>
+<body>
+    <h1> 😥책을 지운다니...어떻게 그런 슬픈 말을...😥 </h1>
+    <h2>역시 지우지 말자.</h2><button onclick="location.href='/main'">돌아가기</button>
+
+    <br><br><br><br>
+
+    <h3>슬프지만 그래도 지워야지......................................</h3>
+    <form action="/book/delete" method="post">
+        <label> 관리자 ID : </label><input type="text" name="user_id">   <!-- user01 -->
+        <label> 관리자 PASSWORD : </label><input type="password" name="user_password"> <!-- 1234 -->
+
+        <label> 지울 책 번호 : </label> <input type="text" name="book_no"> <!-- 1~6 -->
+        <input type="submit" value="책 지우기(정말로...?)">
+    </form>
+
+</body>
+</html>

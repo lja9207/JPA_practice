@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book List</title>
+</head>
+<body>
+    <h1> ~ 책은 마음의 양식 ~ </h1>
+    <table>
+        <tr>
+            <th>책 번호</th>
+            <th>제목</th>
+            <th>저자</th>
+            <th>출판사</th>
+        </tr>
+        <tr th:each="book : ${ bookList }">
+            <th th:text="${ book.book_no }"></th>
+            <th th:text="${ book.book_title }"></th>
+            <th th:text="${ book.book_author }"></th>
+            <th th:text="${ book.book_publisher }"></th>
+        </tr>
+    </table>
+    <button onclick="location.href='/book/delete'">책 삭제하기</button>
+</body>
+</html>

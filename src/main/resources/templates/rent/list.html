@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rent List</title>
+</head>
+<body>
+    <button onclick="location.href='/rent/list'">전체 대여 목록 보기</button>
+    <button onclick="location.href='/rent/list/noreturn'">미반납 대여 목록 보기</button>
+    <table>
+        <tr>
+            <th>대여 번호</th>
+            <th>대여한 사람 번호</th>
+            <th>책 번호</th>
+            <th>대여 날짜</th>
+            <th>반납 상태</th>
+        </tr>
+        <tr th:each="rent : ${ rentList}">
+            <th th:text="${ rent.rent_no }"></th>
+            <th th:text="${ rent.user_no }"></th>
+            <th th:text="${ rent.book_no }"></th>
+            <th th:text="${ rent.rent_date }"></th>
+            <th th:text="${ rent.return_status }"></th>
+        </tr>
+    </table>
+
+    <button onclick="location.href='/rent/return'">반납하기</button>
+</body>
+</html>
